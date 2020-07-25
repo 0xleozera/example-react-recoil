@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil';
 
 import { usernamesList } from '../atoms/users';
 
-import UsersList from './UsersList';
+import UsersList from '../components/UsersList';
 
 function UserInput() {
   const [input, setInput] = useState('');

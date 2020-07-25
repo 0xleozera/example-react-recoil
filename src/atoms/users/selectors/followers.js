@@ -12,14 +12,8 @@ export const userToFollowerMap = selector({
       _usernamesList.map((username) => api.get(`/users/${username}`))
     );
 
-    const followerMap = {};
+    const followers = responses.reduce((acc, { data: user }) => ({ ...acc, [user.login]: user.followers }), {});
 
-    responses.forEach((response) => {
-      const { data: user } = response;
-
-      followerMap[user.login] = user.followers;
-    });
-
-    return followerMap;
+    return followers;
   },
 });

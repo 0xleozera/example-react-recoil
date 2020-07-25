@@ -1,12 +1,12 @@
 import React from 'react';
 import { RecoilRoot } from 'recoil';
 
-import Routes from './routes';
+import UserPage from './pages/UsersPage';
 
 function App() {
   return (
     <RecoilRoot>
-      <Routes />
+      <UserPage />
     </RecoilRoot>
   );
 }
